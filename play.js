@@ -1,6 +1,6 @@
 // const net = require("net");
-const newClient = require("./client");
+const connect = require("./client");
 
 
 
-newClient();
+connect();

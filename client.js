@@ -8,8 +8,12 @@ const connect = function () {
 
   });
 
+  conn.on("connect", () => {
+    console.log("Connection Successful");
+    conn.write("Name: DIY");
+  });
   conn.on("data", (data) => {
-    console.log("hello");
+    console.log(data);
   });
 
   //interpret incoming data as text
@@ -18,6 +22,8 @@ const connect = function () {
   return conn;
 
 };
+
+
 
 
 
