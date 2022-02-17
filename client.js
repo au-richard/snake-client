@@ -20,9 +20,9 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log(data);
   });
-  conn.on("moveUp", () => {
-    "Move: up";
-  });
+  // conn.on("moveUp", () => {
+  //   "Move: up";
+  // });
 
   //interpret incoming data as text
   conn.setEncoding("utf8");
