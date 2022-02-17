@@ -11,6 +11,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Connection Successful");
     conn.write("Name: DIY");
+    //Moving snake at set duration using setTimeOut
     // for (let i = 0; i < 100; i++) {
     //   setTimeout(() => {
     //     conn.write("Move: up");
@@ -20,6 +21,7 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log(data);
   });
+
   // conn.on("moveUp", () => {
   //   "Move: up";
   // });
@@ -31,5 +33,5 @@ const connect = function () {
 
 };
 
-module.exports = connect;
+module.exports = { connect };
 
