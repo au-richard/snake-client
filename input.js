@@ -22,7 +22,7 @@ const handleUserInput = /*process.stdin.on("data",*/ (key) => {
   if (key === 'd') {
     connection.write(d);
   }
-  if (key === z) {
+  if (key === "z") {
     connection.write(z);
   }
 };
