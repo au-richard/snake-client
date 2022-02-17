@@ -5,6 +5,7 @@ const handleUserInput = /*process.stdin.on("data",*/ (key) => {
   let a = "Move: left";
   let s = "Move: down";
   let d = "Move: right";
+  let z = "Say: Vroom Vroom Vroom!!!";
   //\u0003  = ctrl + c 
   if (key === '\u0003') {
     process.exit();
@@ -21,7 +22,9 @@ const handleUserInput = /*process.stdin.on("data",*/ (key) => {
   if (key === 'd') {
     connection.write(d);
   }
-
+  if (key === z) {
+    connection.write(z);
+  }
 };
 
 const setupInput = function (conn) {
